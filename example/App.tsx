@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, StyleSheet, Switch, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { Flex54, Flex54Widget } from '@flex54/react-native-widget';
+import { Flex54, Flex54Widget } from '@flexsmb54/react-native-widget';
 
 const widgetId = process.env.EXPO_PUBLIC_FLEX54_WIDGET_ID;
 const environment =

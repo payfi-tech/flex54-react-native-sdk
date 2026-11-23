@@ -1,5 +1,5 @@
 {
-  "name": "@flex54/react-native-widget",
+  "name": "@flexsmb54/react-native-widget",
   "version": "0.1.0",
   "description": "Flex54 chat widget for React Native (WebView based, no native code)",
   "main": "lib/index.js",

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
-    "@flex54/react-native-widget": "file:..",
+    "@flexsmb54/react-native-widget": "file:..",
     "expo": "~58.0.26",
     "expo-status-bar": "~58.0.5",
     "react": "19.3.0",

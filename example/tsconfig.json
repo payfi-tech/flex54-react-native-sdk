@@ -3,7 +3,7 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@flex54/react-native-widget": ["../src/index.ts"]
+      "@flexsmb54/react-native-widget": ["../src/index.ts"]
     }
   }
 }

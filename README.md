@@ -1,4 +1,4 @@
-# @flex54/react-native-widget
+# @flexsmb54/react-native-widget
 
 The Flex54 chat widget for React Native. It shows the hosted Flex54 widget in a WebView. It has no native code of its own, so it runs in Expo Go.
 
@@ -7,13 +7,13 @@ The Flex54 chat widget for React Native. It shows the hosted Flex54 widget in a 
 Expo:
 
 ```sh
-npx expo install @flex54/react-native-widget react-native-webview react-native-safe-area-context
+npx expo install @flexsmb54/react-native-widget react-native-webview react-native-safe-area-context
 ```
 
 Bare React Native:
 
 ```sh
-npm install @flex54/react-native-widget react-native-webview react-native-safe-area-context
+npm install @flexsmb54/react-native-widget react-native-webview react-native-safe-area-context
 cd ios && pod install
 ```
 
@@ -24,7 +24,7 @@ Peer dependencies: `react >= 18`, `react-native >= 0.72`, `react-native-webview 
 Render `<Flex54Widget>` **exactly once, as the last child of your root component**, so it draws above the rest of the app. It shows a chat button and, when opened, a full-screen chat. Touches anywhere else go to your app as usual.
 
 ```tsx
-import { Flex54Widget } from '@flex54/react-native-widget';
+import { Flex54Widget } from '@flexsmb54/react-native-widget';
 
 export default function App() {
   return (
@@ -60,7 +60,7 @@ Set `widgetId` and `environment` once, when the widget mounts. Changing them on 
 Control the mounted widget from anywhere in your app:
 
 ```ts
-import { Flex54 } from '@flex54/react-native-widget';
+import { Flex54 } from '@flexsmb54/react-native-widget';
 
 Flex54.open();   // show the chat
 Flex54.close();  // hide the chat
