@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Flex54Widget, READY_TIMEOUT_MS } from '../Flex54Widget';
 import { Flex54, resetFlex54ForTesting } from '../Flex54';
 import { buildCommandScript } from '../protocol';
+import { SDK_VERSION } from '../version';
 
 type AnyProps = Record<string, any>;
 
@@ -34,9 +35,9 @@ jest.mock('react-native-safe-area-context', () => require('react-native-safe-are
 const defaultInsetsImpl = jest.mocked(useSafeAreaInsets).getMockImplementation()!;
 
 const PROD_URL =
-  'https://agent.flex54.com/?widgetId=w1&device=mobile&host=native&platform=react-native&sdkVersion=0.1.0';
+  `https://agent.flex54.com/?widgetId=w1&device=mobile&host=native&platform=react-native&sdkVersion=${SDK_VERSION}`;
 const DEV_URL =
-  'https://agent-dev.flex54.com/?widgetId=w1&device=mobile&host=native&platform=react-native&sdkVersion=0.1.0';
+  `https://agent-dev.flex54.com/?widgetId=w1&device=mobile&host=native&platform=react-native&sdkVersion=${SDK_VERSION}`;
 
 const webview = () => {
   if (!mockWebView.lastProps) throw new Error('WebView was never rendered');

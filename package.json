@@ -1,7 +1,8 @@
 {
   "name": "@flexsmb54/react-native-widget",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Flex54 chat widget for React Native (WebView based, no native code)",
+  "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "react-native": "src/index.ts",

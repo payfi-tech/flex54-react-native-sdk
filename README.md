@@ -142,7 +142,7 @@ Expo, in `app.json` (then rebuild the app; Expo Go already has these):
 
 ## How it works
 
-`<Flex54Widget>` draws a chat button and, the first time the chat opens, a full-screen WebView that loads the hosted Flex54 widget with `host=native`. The page and the SDK talk through two small JSON envelopes. The widget posts `ready`, `opened` and `closed` events, and the SDK injects `open`, `close`, `toggle` and `reset` commands. The SDK re-syncs on every `ready` instead of replaying queued commands. Closing hides the surface and tells the widget to close, which unmounts the chat window and disconnects it, so nothing is billed while the chat is hidden. Links that leave the widget's origin open in the system browser. If the WebView's web process dies, the SDK reloads it. A page loaded more than 12 hours ago is reloaded when the chat next opens, so its session doesn't go stale. The full contract is in `PROTOCOL.md` in the flex54-mobile-sdk source repository.
+`<Flex54Widget>` draws a chat button and, the first time the chat opens, a full-screen WebView that loads the hosted Flex54 widget with `host=native`. The page and the SDK talk through two small JSON envelopes. The widget posts `ready`, `opened` and `closed` events, and the SDK injects `open`, `close`, `toggle` and `reset` commands. The SDK re-syncs on every `ready` instead of replaying queued commands. Closing hides the surface and tells the widget to close, which unmounts the chat window and disconnects it, so nothing is billed while the chat is hidden. Links that leave the widget's origin open in the system browser. If the WebView's web process dies, the SDK reloads it. A page loaded more than 12 hours ago is reloaded when the chat next opens, so its session doesn't go stale.
 
 ## Troubleshooting
 
@@ -154,3 +154,7 @@ Expo, in `app.json` (then rebuild the app; Expo Go already has these):
 - **The microphone doesn't work.** Add the permissions above and rebuild the app. `Info.plist` and manifest changes need a native rebuild.
 - **The keyboard covers the message box on Android.** Keyboard behaviour on Android 15 and later with edge-to-edge display is still being verified, and `android:windowSoftInputMode="adjustResize"` may not be enough there. If the keyboard covers the message box, please report it with the device, Android version and React Native version.
 - **Android back.** While the chat is open, back closes it. Otherwise back goes to your app as usual.
+
+## License
+
+MIT

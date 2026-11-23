@@ -1,8 +1,9 @@
 import { buildWidgetUrl, shouldLoadInWebView } from '../url';
+import { SDK_VERSION } from '../version';
 
 it('builds production and development URLs', () => {
   expect(buildWidgetUrl({ widgetId: 'w 1', environment: 'production' })).toBe(
-    'https://agent.flex54.com/?widgetId=w+1&device=mobile&host=native&platform=react-native&sdkVersion=0.1.0');
+    `https://agent.flex54.com/?widgetId=w+1&device=mobile&host=native&platform=react-native&sdkVersion=${SDK_VERSION}`);
   expect(buildWidgetUrl({ widgetId: 'w1', environment: 'development' })).toMatch(/^https:\/\/agent-dev\.flex54\.com\/\?widgetId=w1&/);
 });
 const O = 'https://agent.flex54.com';
